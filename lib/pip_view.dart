@@ -30,7 +30,13 @@ class HomeScreen extends StatelessWidget {
         resizeToAvoidBottomInset: !isFloating,
         body: SafeArea(
             child: Center(
-          child: Padding(padding: EdgeInsets.all(16)),
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [],
+            ),
+          ),
         )),
       );
     });
