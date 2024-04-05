@@ -34,7 +34,18 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [],
+              children: [
+                SizedBox(
+                  height: 100,
+                ),
+                Center(
+                  child: Text('This is the PIP window'),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                MaterialButton(onPressed: () {})
+              ],
             ),
           ),
         )),
