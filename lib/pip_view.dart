@@ -44,12 +44,30 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-                MaterialButton(onPressed: () {})
+                MaterialButton(
+                  onPressed: () {
+                    PIPView.of(context).presentBelow();
+                  },
+                  child: Text(
+                    'Start floating!',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  color: Theme.of(context).primaryColor,
+                )
               ],
             ),
           ),
         )),
       );
     });
+  }
+}
+
+class BackGroundScreen extends StatelessWidget {
+  const BackGroundScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
