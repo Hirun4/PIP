@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 MaterialButton(
                   onPressed: () {
-                    PIPView.of(context).presentBelow();
+                    PIPView.of(context).presentBelow(BackGroundScreen());
                   },
                   child: Text(
                     'Start floating!',
@@ -68,6 +68,14 @@ class BackGroundScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SafeArea(
+          child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Center(
+          child: Text('This is the background page!'),
+        ),
+      )),
+    );
   }
 }
