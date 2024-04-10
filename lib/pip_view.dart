@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:pip_view/pip_view.dart';
 
-class PIPView extends StatefulWidget {
-  const PIPView({super.key});
+class PIP extends StatefulWidget {
+  const PIP({super.key});
 
   @override
-  State<PIPView> createState() => _PIPViewState();
+  State<PIP> createState() => _PIPViewState();
 }
 
-class _PIPViewState extends State<PIPView> {
+class _PIPViewState extends State<PIP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 MaterialButton(
                   onPressed: () {
-                    PIPView.of(context).presentBelow(BackGroundScreen());
+                    PIPView.of(context)?.presentBelow(BackGroundScreen());
                   },
                   child: Text(
                     'Start floating!',
